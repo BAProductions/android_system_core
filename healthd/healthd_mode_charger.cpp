@@ -507,6 +507,8 @@ static void process_key(charger* charger, int code, int64_t now) {
 
 static void handle_input_state(charger* charger, int64_t now) {
     process_key(charger, KEY_POWER, now);
+	process_key(charger, KEY_HOME, now);
+	process_key(charger, KEY_HOMEPAGE, now);
 
     if (charger->next_key_check != -1 && now > charger->next_key_check)
         charger->next_key_check = -1;
